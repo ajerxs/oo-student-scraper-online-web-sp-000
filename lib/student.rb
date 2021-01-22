@@ -6,7 +6,7 @@ class Student
 
   def initialize(student_hash)
     @@all << self
-    @name = name.send(student_hash)
+    @name.send :name, "student_hash"
   end
 
   def self.create_from_collection(students_array)
